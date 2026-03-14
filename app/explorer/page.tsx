@@ -3,6 +3,8 @@ import MaintenanceScreen from "../../components/MaintenanceScreen";
 import { getSiteSnapshot } from "@/lib/site-data";
 import { sora } from "../../components/siteTheme";
 
+export const dynamic = "force-dynamic";
+
 export default async function ExplorerPage() {
   const snapshot = await getSiteSnapshot();
 

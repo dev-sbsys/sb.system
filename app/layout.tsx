@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/site-data";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
 
