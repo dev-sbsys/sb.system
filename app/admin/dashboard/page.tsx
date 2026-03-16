@@ -23,7 +23,7 @@ export default async function AdminDashboardPage() {
 
   return (
     <AdminShell
-      eyebrow="Dashboard"
+      eyebrow="Agelent"
       title="Admin Overview"
       description="Monitor platform content, edit explorer data, and manage settings from a clean developer-first workspace."
       userEmail={session.email}

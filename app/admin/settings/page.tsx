@@ -12,7 +12,7 @@ export default async function AdminSettingsPage() {
 
   return (
     <AdminShell
-      eyebrow="Settings"
+      eyebrow="Agelent"
       title="Platform Settings"
       description="Adjust branding, maintenance mode, and global website behavior with modern controls."
       userEmail={session.email}

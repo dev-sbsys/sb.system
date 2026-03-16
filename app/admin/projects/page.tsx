@@ -12,7 +12,7 @@ export default async function AdminProjectsPage() {
 
   return (
     <AdminShell
-      eyebrow="Explorer"
+      eyebrow="Agelent"
       title="Projects Workspace"
       description="Manage explorer tabs and project records in a structured dashboard layout."
       userEmail={session.email}

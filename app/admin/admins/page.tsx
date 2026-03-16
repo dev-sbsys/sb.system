@@ -28,7 +28,7 @@ export default async function AdminAdminsPage() {
 
   return (
     <AdminShell
-      eyebrow="Admin Management"
+      eyebrow="Agelent"
       title="Access Control"
       description="Review administrator accounts and create new secure logins for the dashboard."
       userEmail={session.email}

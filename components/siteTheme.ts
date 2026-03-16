@@ -1,4 +1,4 @@
-﻿import { Bungee, JetBrains_Mono, Rubik_Mono_One, Sora } from "next/font/google";
+import { Bungee, Comfortaa, Instrument_Serif, Inter, Montserrat, JetBrains_Mono, Share_Tech, Rubik_Mono_One, Sora } from "next/font/google";
 
 export const sora = Sora({
   subsets: ["latin"],
@@ -18,6 +18,21 @@ export const rubikMonoOne = Rubik_Mono_One({
 export const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+export const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const particles = [

@@ -3,7 +3,7 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { supabase } from "./supabase";
 
-const SESSION_COOKIE_NAME = "sb_admin_session";
+const SESSION_COOKIE_NAME = "agelent_admin_session";
 const SESSION_DURATION_SECONDS = 60 * 60 * 24 * 7;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -20,7 +20,7 @@ type AdminSession = {
 };
 
 function getJwtSecret() {
-  return new TextEncoder().encode(process.env.AUTH_SECRET ?? "sb-system-local-session-secret");
+  return new TextEncoder().encode(process.env.AUTH_SECRET ?? "agelent-local-session-secret");
 }
 
 export function isValidAdminEmail(email: string) {

@@ -30,6 +30,12 @@ export type ExplorerProject = {
   sortOrder: number;
 };
 
+export type InstallCommand = {
+  id: string;
+  osName: string;
+  command: string;
+};
+
 export async function getSiteSettings(): Promise<SiteSettings> {
   const { data, error } = await supabase
     .from("settings")
@@ -108,13 +114,31 @@ export async function getExplorerProjects(): Promise<ExplorerProject[]> {
   }));
 }
 
+export async function getInstallCommands(): Promise<InstallCommand[]> {
+  const { data, error } = await supabase
+    .from("install_commands")
+    .select("id, os_name, command")
+    .order("created_at", { ascending: true });
+
+  if (error) {
+    throw new Error(`Failed to fetch install commands: ${error.message}`);
+  }
+
+  return (data ?? []).map((row) => ({
+    id: row.id,
+    osName: row.os_name,
+    command: row.command,
+  }));
+}
+
 export async function getSiteSnapshot() {
-  const [settings, quickLinks, categories, projects] = await Promise.all([
+  const [settings, quickLinks, categories, projects, installCommands] = await Promise.all([
     getSiteSettings(),
     getQuickLinks(),
     getExplorerCategories(),
     getExplorerProjects(),
+    getInstallCommands(),
   ]);
 
-  return { settings, quickLinks, categories, projects };
+  return { settings, quickLinks, categories, projects, installCommands };
 }

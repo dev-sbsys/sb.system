@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -49,7 +49,7 @@ export default function AdminLoginCard() {
           <div className="text-[11px] uppercase tracking-[0.25em] text-[#ff5c5c]">admin access</div>
           <h1 className="mt-4 text-[18px] font-semibold tracking-[-0.03em] text-white sm:text-[22px]">Admin Login</h1>
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#8f8f8f]">
-            Authenticate with your admin email and password to unlock the SB.system control shell.
+            Authenticate with your admin email and password to unlock the Agelent control shell.
           </p>
 
           <form className="mt-7 space-y-4" onSubmit={handleSubmit}>
@@ -61,7 +61,7 @@ export default function AdminLoginCard() {
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  placeholder="admin email"
+                  placeholder="admin@agelent.dev"
                   autoComplete="email"
                   className="w-full bg-transparent text-sm text-white outline-none placeholder:text-[#5f5f5f]"
                 />

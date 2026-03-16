@@ -23,7 +23,7 @@ export default function Features() {
         <div className="mx-auto max-w-2xl text-center">
           <SectionHeader title="Features" />
           <p className="mt-6 text-base leading-8 text-[#9ca3af] sm:text-lg">
-            Core capabilities that shape the SB.system ecosystem.
+            Core capabilities that shape the Agelent ecosystem.
           </p>
         </div>
 

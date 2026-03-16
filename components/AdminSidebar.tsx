@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -23,6 +23,7 @@ export default function AdminSidebar({ onNavigate }: AdminSidebarProps) {
   const items: SidebarItem[] = [
     { href: "/admin/dashboard#quick-links", label: "Quick Links", command: "edit quick-links", match: ["/admin/dashboard"], icon: <LinkIcon /> },
     { href: "/admin/projects", label: "Explorer Tabs", command: "manage tabs + projects", match: ["/admin/projects"], icon: <LayersIcon /> },
+    { href: "/admin/install-commands", label: "Commands", command: "agelent.admin.installer", match: ["/admin/install-commands"], icon: <TerminalIcon /> },
     { href: "/admin/settings", label: "Settings", command: "edit settings", match: ["/admin/settings"], icon: <GearIcon /> },
     { href: "/admin/admins", label: "Admin Management", command: "manage admins", match: ["/admin/admins"], icon: <ShieldIcon /> },
   ];
@@ -34,13 +35,13 @@ export default function AdminSidebar({ onNavigate }: AdminSidebarProps) {
           <span className="h-3 w-3 rounded-full bg-[#ef4444]" />
           <span className="h-3 w-3 rounded-full bg-[#f59e0b]" />
           <span className="h-3 w-3 rounded-full bg-[#22c55e]" />
-          <span className="ml-3 text-[11px] uppercase tracking-[0.28em] text-[#94a3b8]">SB.ADMIN.SHELL</span>
+          <span className="ml-3 text-[11px] uppercase tracking-[0.28em] text-[#94a3b8]">AGELENT.ADMIN.SHELL</span>
         </div>
       </div>
 
       <div className="flex-1 px-4 py-5">
         <div className="rounded-2xl border border-[#1f2937] bg-[#0b1120] px-4 py-4 text-xs leading-6 text-[#94a3b8]">
-          <div><span className="text-[#6366f1]">$</span> connect sb.admin</div>
+          <div><span className="text-[#6366f1]">$</span> connect admin</div>
           <div><span className="text-[#64748b]">&gt;</span> developer console ready</div>
         </div>
 
@@ -55,8 +56,8 @@ export default function AdminSidebar({ onNavigate }: AdminSidebarProps) {
                 prefetch
                 onClick={onNavigate}
                 className={`group flex items-center justify-between rounded-2xl border px-4 py-3 transition-all duration-200 ${isActive
-                    ? "border-[#374151] bg-[#111827] shadow-[inset_0_0_0_1px_rgba(99,102,241,0.28)]"
-                    : "border-transparent bg-transparent hover:border-[#1f2937] hover:bg-[#0f172a]"
+                  ? "border-[#374151] bg-[#111827] shadow-[inset_0_0_0_1px_rgba(99,102,241,0.28)]"
+                  : "border-transparent bg-transparent hover:border-[#1f2937] hover:bg-[#0f172a]"
                   }`}
               >
                 <div className="flex items-center gap-3">
@@ -92,4 +93,7 @@ function GearIcon() {
 }
 function ShieldIcon() {
   return <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3.5 8.7 7 10 3.5-1.3 7-5 7-10V6z" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.7" /></svg>;
+}
+function TerminalIcon() {
+  return <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7"><path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>;
 }

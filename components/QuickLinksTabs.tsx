@@ -8,8 +8,8 @@ type TabKey = "GitHub" | "Discord" | "Docs" | "Website";
 const tabs: { key: TabKey; href: string }[] = [
   { key: "GitHub", href: "https://github.com/shahabas" },
   { key: "Discord", href: "https://discord.gg/example" },
-  { key: "Docs", href: "https://docs.sb.system" },
-  { key: "Website", href: "https://sb.system" },
+  { key: "Docs", href: "https://docs.agelent.dev" },
+  { key: "Website", href: "https://agelent.dev" },
 ];
 
 export default function QuickLinksTabs() {

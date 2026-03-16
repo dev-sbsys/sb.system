@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -55,7 +55,7 @@ export default function AdminManager({ initialAdmins }: AdminManagerProps) {
 
       <div className="mt-6 rounded-2xl border border-[#1f2937] bg-[#0f172a] p-5">
         <div className="grid gap-3 lg:grid-cols-[1fr_1fr_auto]">
-          <input value={email} onChange={(event) => setEmail(event.target.value)} className="rounded-xl border border-[#1f2937] bg-[#111827] px-4 py-3 text-sm text-[#e5e7eb] outline-none transition focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20" placeholder="admin@sb.system" />
+          <input value={email} onChange={(event) => setEmail(event.target.value)} className="rounded-xl border border-[#1f2937] bg-[#111827] px-4 py-3 text-sm text-[#e5e7eb] outline-none transition focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20" placeholder="admin@agelent.dev" />
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} className="rounded-xl border border-[#1f2937] bg-[#111827] px-4 py-3 text-sm text-[#e5e7eb] outline-none transition focus:border-[#6366f1] focus:ring-2 focus:ring-[#6366f1]/20" placeholder="Password" />
           <button type="button" onClick={addAdmin} className="rounded-xl border border-[#4f46e5]/40 bg-[#312e81]/20 px-4 py-3 text-sm font-medium text-[#e5e7eb] transition hover:border-[#6366f1] hover:bg-[#312e81]/30">Add Admin</button>
         </div>

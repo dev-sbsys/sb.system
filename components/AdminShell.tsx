@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, type ReactNode } from "react";
 import { sora } from "./siteTheme";
@@ -42,7 +42,7 @@ export default function AdminShell({ title, eyebrow, description, userEmail, chi
 
 
                 <span className="ml-3 text-[11px] uppercase tracking-[0.28em] text-[#94a3b8]">
-                  SB.ADMIN.SHELL
+                  AGELENT.ADMIN.SHELL
                 </span>
               </div>
 
@@ -68,7 +68,7 @@ export default function AdminShell({ title, eyebrow, description, userEmail, chi
                   </div>
 
                   <div className="hidden sm:block">
-                    <div className="text-sm text-[#94a3b8]">{userEmail ?? "admin@sb.system"}</div>
+                    <div className="text-sm text-[#94a3b8]">{userEmail ?? "admin@agelent.dev"}</div>
                   </div>
 
                   <AdminLogoutButton />

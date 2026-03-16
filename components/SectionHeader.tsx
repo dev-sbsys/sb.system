@@ -6,7 +6,7 @@ type SectionHeaderProps = {
 
 export default function SectionHeader({ title }: SectionHeaderProps) {
   return (
-    <div className={`${sora.className} flex items-center justify-center gap-3 text-center`}>
+    <div className={`${sora.className} flex items-center justify-center gap-3 text-center`} suppressHydrationWarning>
       <span className="text-2xl font-bold leading-none tracking-[0.08em] text-[#ff2a2a] sm:text-3xl">
         &gt;
       </span>
