@@ -3,10 +3,10 @@ import { supabase } from "@/lib/supabase";
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { teamId: string } }
+  context: { params: Promise<{ teamId: string }> }
 ) {
   try {
-    const { teamId } = params;
+    const { teamId } = await context.params;
     const { email, role } = await request.json();
 
     if (!email) {

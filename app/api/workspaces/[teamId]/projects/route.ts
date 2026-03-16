@@ -4,10 +4,10 @@ import { makeId } from "@/lib/db";
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { teamId: string } }
+  context: { params: Promise<{ teamId: string }> }
 ) {
   try {
-    const { teamId } = params;
+    const { teamId } = await context.params;
     const { name, description, creator_email } = await request.json();
 
     if (!name) {

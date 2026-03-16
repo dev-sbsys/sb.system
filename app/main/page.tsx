@@ -11,5 +11,5 @@ export default async function MainPage() {
     return <MaintenanceScreen websiteName={snapshot.settings.websiteName} />;
   }
 
-  return <HomePage settings={snapshot.settings} quickLinks={snapshot.quickLinks} />;
+  return <HomePage settings={snapshot.settings} quickLinks={snapshot.quickLinks} installCommands={[]} />;
 }
